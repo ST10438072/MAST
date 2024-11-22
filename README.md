@@ -7,4 +7,5 @@ The menu screen the user will see the name of which show them what food items th
 In the Home page I put an option to show specials for the days of the week and it shows specials for the current day and it shows the previous days specials 
 I added a drinks function to the MenuScreen
 
-YouTube Link https: //youtu.be/Onofl-YhDE8?si=vMvwtrSMPGwlzBTp
+YouTube Link https: https://www.youtube.com/watch?v=KnaQpDkaniY
+
