@@ -19,11 +19,11 @@ const menuData = {
     { id: '12', name: 'Seafood', price: 400 },
   ],
   Sides: [
-    {id: '13', name: 'Fries', price: 20},
-    {id: '14', name: 'Pumpkin', price: 20},
-    {id: '15', name: 'Spinach', price: 20},
-    {id: '16', name: 'Mash', price: 20},
-    {id: '17', name: 'Butternut', price: 20},
+    { id: '13', name: 'Fries', price: 20 },
+    { id: '14', name: 'Pumpkin', price: 20 },
+    { id: '15', name: 'Spinach', price: 20 },
+    { id: '16', name: 'Mash', price: 20 },
+    { id: '17', name: 'Butternut', price: 20 },
   ],
   Dessert: [
     { id: '23', name: 'Ice Cream', price: 40 },
@@ -32,16 +32,23 @@ const menuData = {
     { id: '26', name: 'Sweets with Caramel', price: 100 },
     { id: '27', name: 'MilkShake', price: 45 },
   ],
+  Drinks: [
+    { id: '28', name: 'Coke', price: 15 },
+    { id: '29', name: 'Sprite', price: 15 },
+    { id: '30', name: 'Orange Juice', price: 20 },
+    { id: '31', name: 'Lemonade', price: 20 },
+    { id: '32', name: 'Water', price: 10 },
+  ],
 };
 
 const MenuScreen = () => {
-  const [selectedCuisine, setSelectedCuisine] = useState('Dessert'); 
+  const [selectedCuisine, setSelectedCuisine] = useState('Dessert');
   const [orderCount, setOrderCount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0); 
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleAddToOrder = (price) => {
     setOrderCount(orderCount + 1);
-    setTotalPrice(totalPrice + price); 
+    setTotalPrice(totalPrice + price);
   };
 
   const handleConfirmOrder = () => {
@@ -70,8 +77,9 @@ const MenuScreen = () => {
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <View style={styles.menuItem}>
-            <Text style={styles.menuItemText}>{item.name} - R{item.price}</Text>
-            <Text style={styles.menuItemDescription}>{item.description}</Text>
+            <Text style={styles.menuItemText}>
+              {item.name} - R{item.price}
+            </Text>
             <Button title="Add to Order" onPress={() => handleAddToOrder(item.price)} />
           </View>
         )}
@@ -92,7 +100,6 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     backgroundColor: '#800080',
-
   },
   title: {
     fontSize: 28,
@@ -133,11 +140,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  menuItemDescription: {
-    fontSize: 14,
-    color: '#666',
-    marginBottom: 10,
-  },
   orderSummary: {
     fontSize: 18,
     textAlign: 'center',
@@ -158,4 +160,3 @@ const styles = StyleSheet.create({
 });
 
 export default MenuScreen;
-//OpenAI. (2024). MenuScreen Component in React Native. Available at: GitHub Repository or Your Project (Accessed: 2 October 2024).\
